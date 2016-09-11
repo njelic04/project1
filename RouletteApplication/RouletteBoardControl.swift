@@ -38,168 +38,135 @@ class RouletteBoardControl: UIView {
         RouletteCalculator.Engine.RouletteReset()
         
         let boardButtonZero = UIButton(frame: CGRect( x:2*width, y: 0, width: 3*width, height: height))
-        print(" width \(width), height \(height)")
-        //boardButtonZero.layer.borderColor = yellow.CGColor
-        //boardButtonZero.layer.borderWidth = 1
-        boardButtonZero.addTarget(self, action: #selector(RouletteBoardControl.boardButtonZeroTapped(_ :)), forControlEvents: .TouchDown)
         let zeroImage = UIImage(named:"number0")
-        boardButtonZero.setBackgroundImage(zeroImage, forState: .Normal)
+        setupButton(on: boardButtonZero, with: zeroImage!, border: 1, widthColor: yellow.CGColor)
+        boardButtonZero.addTarget(self, action: #selector(RouletteBoardControl.boardButtonZeroTapped(_ :)), forControlEvents: .TouchDown)
         boardButtons["Zero"] = boardButtonZero
         boardValues["Zero"] = 0.0
         addSubview(boardButtonZero)
         
         
         let boardButton118 = UIButton(frame: CGRect(x:0, y:height, width: width, height: 2*height))
-        boardButton118.layer.borderColor = yellow.CGColor
-        boardButton118.layer.borderWidth = 1
-        boardButton118.addTarget(self, action: #selector(RouletteBoardControl.boardButton118Tapped(_:)), forControlEvents: .TouchDown)
         let image118 = UIImage(named:"image118")
-        boardButton118.setBackgroundImage(image118, forState: .Normal)
+        setupButton(on: boardButton118, with: image118!, border: 1, widthColor: yellow.CGColor)
+        boardButton118.addTarget(self, action: #selector(RouletteBoardControl.boardButton118Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["118"] = boardButton118
         boardValues["118"] = 0.0
         addSubview(boardButton118)
         
         let boardButton112 = UIButton(frame: CGRect( x: width, y: height, width: width, height: 4*height))
-        boardButton112.layer.borderColor = yellow.CGColor
-        boardButton112.layer.borderWidth = 1
-        boardButton112.addTarget(self, action: #selector( RouletteBoardControl.boardButton112Tapped(_:)), forControlEvents: .TouchDown)
         let image112 = UIImage(named:"image112")
-        boardButton112.setBackgroundImage(image112, forState: .Normal)
+        setupButton(on: boardButton112, with: image112!, border: 1, widthColor: yellow.CGColor)
+        boardButton112.addTarget(self, action: #selector( RouletteBoardControl.boardButton112Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["112"] = boardButton112
         boardValues["112"] = 0.0
         addSubview(boardButton112)
         
         let boardButton1 = UIButton( frame: CGRect( x: 2*width, y: height, width: width, height: height))
-        boardButton1.layer.borderColor = yellow.CGColor
-        boardButton1.layer.borderWidth = 1
-        boardButton1.addTarget(self, action: #selector( RouletteBoardControl.boardButton1Tapped(_:)), forControlEvents: .TouchDown)
         let number1 = UIImage(named:"number1")
-        boardButton1.setBackgroundImage(number1, forState: .Normal)
+        setupButton(on: boardButton1, with: number1!, border: 1, widthColor: yellow.CGColor)
+        boardButton1.addTarget(self, action: #selector( RouletteBoardControl.boardButton1Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["1"] = boardButton1
         boardValues["1"] = 0.0
         addSubview(boardButton1)
         
         let boardButton2 = UIButton( frame: CGRect(x: 3*width, y: height, width: width, height: height))
-        boardButton2.layer.borderColor = yellow.CGColor
-        boardButton2.layer.borderWidth = 1
-        boardButton2.addTarget(self, action: #selector(RouletteBoardControl.boardButton2Tapped(_:)), forControlEvents: .TouchDown)
         let number2 = UIImage(named:"number2")
-        boardButton2.setBackgroundImage(number2, forState: .Normal)
+        setupButton(on: boardButton2, with: number2!, border: 1, widthColor: yellow.CGColor)
+        boardButton2.addTarget(self, action: #selector(RouletteBoardControl.boardButton2Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["2"] = boardButton2
         boardValues["2"] = 0.0
         addSubview(boardButton2)
         
         
         let boardButton3 = UIButton( frame: CGRect(x: 4*width, y: height, width: width, height: height))
-        boardButton3.layer.borderColor = yellow.CGColor
-        boardButton3.layer.borderWidth = 1
-        boardButton3.addTarget(self, action: #selector( RouletteBoardControl.boardButton3Tapped(_:)), forControlEvents: .TouchDown)
         let number3 = UIImage(named:"number3")
-        boardButton3.setBackgroundImage(number3, forState: .Normal)
+        setupButton(on: boardButton3, with: number3!, border: 1, widthColor: yellow.CGColor)
+        boardButton3.addTarget(self, action: #selector( RouletteBoardControl.boardButton3Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["3"] = boardButton3
         boardValues["3"] = 0.0
         addSubview(boardButton3)
         
         
         let boardButton4 = UIButton( frame: CGRect(x: 2*width, y: 2*height, width: width, height: height))
-        boardButton4.layer.borderColor = yellow.CGColor
-        boardButton4.layer.borderWidth = 1
-        boardButton4.addTarget(self, action: #selector( RouletteBoardControl.boardButton4Tapped(_:)), forControlEvents: .TouchDown)
         let number4 = UIImage(named:"number4")
-        boardButton4.setBackgroundImage(number4, forState: .Normal)
+        setupButton(on: boardButton4, with: number4!, border: 1, widthColor: yellow.CGColor)
+        boardButton4.addTarget(self, action: #selector( RouletteBoardControl.boardButton4Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["4"] = boardButton4
         boardValues["4"] = 0.0
         addSubview(boardButton4)
         
         let boardButton5 = UIButton( frame: CGRect( x: 3*width, y: 2*height, width: width, height: height))
-        boardButton5.layer.borderColor = yellow.CGColor
-        boardButton5.layer.borderWidth = 1
-        boardButton5.addTarget(self, action: #selector( RouletteBoardControl.boardButton5Tapped(_:)), forControlEvents: .TouchDown)
         let number5 = UIImage(named:"number5")
-        boardButton5.setBackgroundImage(number5, forState: .Normal)
+        setupButton(on: boardButton5, with: number5!, border: 1, widthColor: yellow.CGColor)
+        boardButton5.addTarget(self, action: #selector( RouletteBoardControl.boardButton5Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["5"] = boardButton5
         boardValues["5"] = 0.0
         addSubview(boardButton5)
         
         let boardButton6 = UIButton( frame: CGRect(x: 4*width, y: 2*height, width: width, height: height))
-        boardButton6.layer.borderColor = yellow.CGColor
-        boardButton6.layer.borderWidth = 1
-        boardButton6.addTarget(self, action: #selector(RouletteBoardControl.boardButton6Tapped(_:)), forControlEvents: .TouchDown)
         let number6 = UIImage(named:"number6")
-        boardButton6.setBackgroundImage(number6, forState: .Normal)
+        setupButton(on: boardButton6, with: number6!, border: 1, widthColor: yellow.CGColor)
+        boardButton6.addTarget(self, action: #selector(RouletteBoardControl.boardButton6Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["6"] = boardButton6
         boardValues["6"] = 0.0
         addSubview(boardButton6)
         
         
         let boardButtonEven = UIButton(frame: CGRect(x:0, y:3*height, width: width, height: 2*height))
-        boardButtonEven.layer.borderColor = yellow.CGColor
-        boardButtonEven.layer.borderWidth = 1
-        boardButtonEven.addTarget(self, action: #selector(RouletteBoardControl.boardButtonEvenTapped(_:)), forControlEvents: .TouchDown)
         let even = UIImage(named:"even")
-        boardButtonEven.setBackgroundImage(even, forState: .Normal)
+        setupButton(on: boardButtonEven, with: even!, border: 1, widthColor: yellow.CGColor)
+        boardButtonEven.addTarget(self, action: #selector(RouletteBoardControl.boardButtonEvenTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["Even"] = boardButtonEven
         boardValues["Even"] = 0.0
         addSubview(boardButtonEven)
         
         let boardButton7 = UIButton( frame: CGRect( x: 2*width, y: 3*height, width: width, height: height))
-        boardButton7.layer.borderColor = yellow.CGColor
-        boardButton7.layer.borderWidth = 1
-        boardButton7.addTarget(self, action: #selector( RouletteBoardControl.boardButton7Tapped(_:)), forControlEvents: .TouchDown)
         let number7 = UIImage(named:"number7")
-        boardButton7.setBackgroundImage(number7, forState: .Normal)
+        setupButton(on: boardButton7, with: number7!, border: 1, widthColor: yellow.CGColor)
+        boardButton7.addTarget(self, action: #selector( RouletteBoardControl.boardButton7Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["7"] = boardButton7
         boardValues["7"] = 0.0
         addSubview(boardButton7)
         
         let boardButton8 = UIButton( frame: CGRect(x: 3*width, y: 3*height, width: width, height: height))
-        boardButton8.layer.borderColor = yellow.CGColor
-        boardButton8.layer.borderWidth = 1
-        boardButton8.addTarget(self, action: #selector(RouletteBoardControl.boardButton8Tapped(_:)), forControlEvents: .TouchDown)
         let number8 = UIImage(named:"number8")
-        boardButton8.setBackgroundImage(number8, forState: .Normal)
+        setupButton(on: boardButton8, with: number8!, border: 1, widthColor: yellow.CGColor)
+        boardButton8.addTarget(self, action: #selector(RouletteBoardControl.boardButton8Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["8"] = boardButton8
         boardValues["8"] = 0.0
         addSubview(boardButton8)
         
         let boardButton9 = UIButton( frame: CGRect(x: 4*width, y: 3*height, width: width, height: height))
-        boardButton9.layer.borderColor = yellow.CGColor
-        boardButton9.layer.borderWidth = 1
-        boardButton9.addTarget(self, action: #selector( RouletteBoardControl.boardButton9Tapped(_:)), forControlEvents: .TouchDown)
         let number9 = UIImage(named:"number9")
-        boardButton9.setBackgroundImage(number9, forState: .Normal)
+        setupButton(on: boardButton9, with: number9!, border: 1, widthColor: yellow.CGColor)
+        boardButton9.addTarget(self, action: #selector( RouletteBoardControl.boardButton9Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["9"] = boardButton9
         boardValues["9"] = 0.0
         addSubview(boardButton9)
         
         
         let boardButton10 = UIButton( frame: CGRect(x: 2*width, y: 4*height, width: width, height: height))
-        boardButton10.layer.borderColor = yellow.CGColor
-        boardButton10.layer.borderWidth = 1
-        boardButton10.addTarget(self, action: #selector( RouletteBoardControl.boardButton10Tapped(_:)), forControlEvents: .TouchDown)
         let number10 = UIImage(named:"number10")
-        boardButton10.setBackgroundImage(number10, forState: .Normal)
+        setupButton(on: boardButton10, with: number10!, border: 1, widthColor: yellow.CGColor)
+        boardButton10.addTarget(self, action: #selector( RouletteBoardControl.boardButton10Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["10"] = boardButton10
         boardValues["10"] = 0.0
         addSubview(boardButton10)
         
         
         let boardButton11 = UIButton( frame: CGRect( x: 3*width, y: 4*height, width: width, height: height))
-        boardButton11.layer.borderColor = yellow.CGColor
-        boardButton11.layer.borderWidth = 1
-        boardButton11.addTarget(self, action: #selector( RouletteBoardControl.boardButton11Tapped(_:)), forControlEvents: .TouchDown)
         let number11 = UIImage(named:"number11")
-        boardButton11.setBackgroundImage(number11, forState: .Normal)
+        setupButton(on: boardButton11, with: number11!, border: 1, widthColor: yellow.CGColor)
+        boardButton11.addTarget(self, action: #selector( RouletteBoardControl.boardButton11Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["11"] = boardButton11
         boardValues["11"] = 0.0
         addSubview(boardButton11)
         
         let boardButton12 = UIButton( frame: CGRect(x: 4*width, y: 4*height, width: width, height: height))
-        boardButton12.layer.borderColor = yellow.CGColor
-        boardButton12.layer.borderWidth = 1
-        boardButton12.addTarget(self, action: #selector(RouletteBoardControl.boardButton12Tapped(_:)), forControlEvents: .TouchDown)
         let number12 = UIImage(named:"number12")
-        boardButton12.setBackgroundImage(number12, forState: .Normal)
+        setupButton(on: boardButton12, with: number12!, border: 1, widthColor: yellow.CGColor)
+        boardButton12.addTarget(self, action: #selector(RouletteBoardControl.boardButton12Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["12"] = boardButton12
         boardValues["12"] = 0.0
         addSubview(boardButton12)
@@ -207,153 +174,123 @@ class RouletteBoardControl: UIView {
         //novi ciklus
         
         let boardButtonRed = UIButton(frame: CGRect(x:0, y:5*height, width: width, height: 2*height))
-        boardButtonRed.layer.borderColor = yellow.CGColor
-        boardButtonRed.layer.borderWidth = 1
-        boardButtonRed.addTarget(self, action: #selector(RouletteBoardControl.boardButtonRedTapped(_:)), forControlEvents: .TouchDown)
         let red = UIImage(named:"red")
-        boardButtonRed.setBackgroundImage(red, forState: .Normal)
+        setupButton(on: boardButtonRed, with: red!, border: 1, widthColor: yellow.CGColor)
+        boardButtonRed.addTarget(self, action: #selector(RouletteBoardControl.boardButtonRedTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["Red"] = boardButtonRed
         boardValues["Red"] = 0.0
         addSubview(boardButtonRed)
         
         let boardButton1324 = UIButton(frame: CGRect( x: width, y: 5*height, width: width, height: 4*height))
-        boardButton1324.layer.borderColor = yellow.CGColor
-        boardButton1324.layer.borderWidth = 1
-        boardButton1324.addTarget(self, action: #selector( RouletteBoardControl.boardButton1324Tapped(_:)), forControlEvents: .TouchDown)
         let image1324 = UIImage(named:"image1324")
-        boardButton1324.setBackgroundImage(image1324, forState: .Normal)
+        setupButton(on: boardButton1324, with: image1324!, border: 1, widthColor: yellow.CGColor)
+        boardButton1324.addTarget(self, action: #selector( RouletteBoardControl.boardButton1324Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["1324"] = boardButton1324
-        boardValues["1234"] = 0.0
+        boardValues["1324"] = 0.0
         addSubview(boardButton1324)
         
         let boardButton13 = UIButton( frame: CGRect( x: 2*width, y: 5*height, width: width, height: height))
-        boardButton13.layer.borderColor = yellow.CGColor
-        boardButton13.layer.borderWidth = 1
-        boardButton13.addTarget(self, action: #selector( RouletteBoardControl.boardButton13Tapped(_:)), forControlEvents: .TouchDown)
         let number13 = UIImage(named:"number13")
-        boardButton13.setBackgroundImage(number13, forState: .Normal)
+        setupButton(on: boardButton13, with: number13!, border: 1, widthColor: yellow.CGColor)
+        boardButton13.addTarget(self, action: #selector( RouletteBoardControl.boardButton13Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["13"] = boardButton13
         boardValues["13"] = 0.0
         addSubview(boardButton13)
         
         let boardButton14 = UIButton( frame: CGRect(x: 3*width, y: 5*height, width: width, height: height))
-        boardButton14.layer.borderColor = yellow.CGColor
-        boardButton14.layer.borderWidth = 1
-        boardButton14.addTarget(self, action: #selector(RouletteBoardControl.boardButton14Tapped(_:)), forControlEvents: .TouchDown)
         let number14 = UIImage(named:"number14")
-        boardButton14.setBackgroundImage(number14, forState: .Normal)
+        setupButton(on: boardButton14, with: number14!, border: 1, widthColor: yellow.CGColor)
+        boardButton14.addTarget(self, action: #selector(RouletteBoardControl.boardButton14Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["14"] = boardButton14
         boardValues["14"] = 0.0
         addSubview(boardButton14)
         
         let boardButton15 = UIButton( frame: CGRect(x: 4*width, y: 5*height, width: width, height: height))
-        boardButton15.layer.borderColor = yellow.CGColor
-        boardButton15.layer.borderWidth = 1
-        boardButton15.addTarget(self, action: #selector( RouletteBoardControl.boardButton15Tapped(_:)), forControlEvents: .TouchDown)
         let number15 = UIImage(named:"number15")
-        boardButton15.setBackgroundImage(number15, forState: .Normal)
+        setupButton(on: boardButton15, with: number15!, border: 1, widthColor: yellow.CGColor)
+        boardButton15.addTarget(self, action: #selector( RouletteBoardControl.boardButton15Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["15"] = boardButton15
         boardValues["15"] = 0.0
         addSubview(boardButton15)
         
         
         let boardButton16 = UIButton( frame: CGRect(x: 2*width, y: 6*height, width: width, height: height))
-        boardButton16.layer.borderColor = yellow.CGColor
-        boardButton16.layer.borderWidth = 1
-        boardButton16.addTarget(self, action: #selector( RouletteBoardControl.boardButton16Tapped(_:)), forControlEvents: .TouchDown)
         let number16 = UIImage(named:"number16")
-        boardButton16.setBackgroundImage(number16, forState: .Normal)
+        setupButton(on: boardButton16, with: number16!, border: 1, widthColor: yellow.CGColor)
+        boardButton16.addTarget(self, action: #selector( RouletteBoardControl.boardButton16Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["16"] = boardButton16
         boardValues["16"] = 0.0
         addSubview(boardButton16)
         
         
         let boardButton17 = UIButton( frame: CGRect( x: 3*width, y: 6*height, width: width, height: height))
-        boardButton17.layer.borderColor = yellow.CGColor
-        boardButton17.layer.borderWidth = 1
-        boardButton17.addTarget(self, action: #selector( RouletteBoardControl.boardButton17Tapped(_:)), forControlEvents: .TouchDown)
         let number17 = UIImage(named:"number17")
-        boardButton17.setBackgroundImage(number17, forState: .Normal)
+        setupButton(on: boardButton17, with: number17!, border: 1, widthColor: yellow.CGColor)
+        boardButton17.addTarget(self, action: #selector( RouletteBoardControl.boardButton17Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["17"] = boardButton17
         boardValues["17"] = 0.0
         addSubview(boardButton17)
         
         let boardButton18 = UIButton( frame: CGRect(x: 4*width, y: 6*height, width: width, height: height))
-        boardButton18.layer.borderColor = yellow.CGColor
-        boardButton18.layer.borderWidth = 1
-        boardButton18.addTarget(self, action: #selector(RouletteBoardControl.boardButton18Tapped(_:)), forControlEvents: .TouchDown)
         let number18 = UIImage(named:"number18")
-        boardButton18.setBackgroundImage(number18, forState: .Normal)
+        setupButton(on: boardButton18, with: number18!, border: 1, widthColor: yellow.CGColor)
+        boardButton18.addTarget(self, action: #selector(RouletteBoardControl.boardButton18Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["18"] = boardButton18
         boardValues["18"] = 0.0
         addSubview(boardButton18)
         
         let boardButtonBlack = UIButton(frame: CGRect(x:0, y:7*height, width: width, height: 2*height))
-        boardButtonBlack.layer.borderColor = yellow.CGColor
-        boardButtonBlack.layer.borderWidth = 1
-        boardButtonBlack.addTarget(self, action: #selector(RouletteBoardControl.boardButtonBlackTapped(_:)), forControlEvents: .TouchDown)
         let black = UIImage(named:"black")
-        boardButtonBlack.setBackgroundImage(black, forState: .Normal)
+        setupButton(on: boardButtonBlack, with: black!, border: 1, widthColor: yellow.CGColor)
+        boardButtonBlack.addTarget(self, action: #selector(RouletteBoardControl.boardButtonBlackTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["Black"] = boardButtonBlack
         boardValues["Black"] = 0.0
         addSubview(boardButtonBlack)
         
         let boardButton19 = UIButton( frame: CGRect( x: 2*width, y: 7*height, width: width, height: height))
-        boardButton19.layer.borderColor = yellow.CGColor
-        boardButton19.layer.borderWidth = 1
-        boardButton19.addTarget(self, action: #selector( RouletteBoardControl.boardButton19Tapped(_:)), forControlEvents: .TouchDown)
         let number19 = UIImage(named:"number19")
-        boardButton19.setBackgroundImage(number19, forState: .Normal)
+        setupButton(on: boardButton19, with: number19!, border: 1, widthColor: yellow.CGColor)
+        boardButton19.addTarget(self, action: #selector( RouletteBoardControl.boardButton19Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["19"] = boardButton19
         boardValues["19"] = 0.0
         addSubview(boardButton19)
         
         let boardButton20 = UIButton( frame: CGRect(x: 3*width, y: 7*height, width: width, height: height))
-        boardButton20.layer.borderColor = yellow.CGColor
-        boardButton20.layer.borderWidth = 1
-        boardButton20.addTarget(self, action: #selector(RouletteBoardControl.boardButton20Tapped(_:)), forControlEvents: .TouchDown)
         let number20 = UIImage(named:"number20")
-        boardButton20.setBackgroundImage(number20, forState: .Normal)
+        setupButton(on: boardButton20, with: number20!, border: 1, widthColor: yellow.CGColor)
+        boardButton20.addTarget(self, action: #selector(RouletteBoardControl.boardButton20Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["20"] = boardButton20
         boardValues["20"] = 0.0
         addSubview(boardButton20)
         
         let boardButton21 = UIButton( frame: CGRect(x: 4*width, y: 7*height, width: width, height: height))
-        boardButton21.layer.borderColor = yellow.CGColor
-        boardButton21.layer.borderWidth = 1
-        boardButton21.addTarget(self, action: #selector( RouletteBoardControl.boardButton21Tapped(_:)), forControlEvents: .TouchDown)
         let number21 = UIImage(named:"number21")
-        boardButton21.setBackgroundImage(number21, forState: .Normal)
+        setupButton(on: boardButton21, with: number21!, border: 1, widthColor: yellow.CGColor)
+        boardButton21.addTarget(self, action: #selector( RouletteBoardControl.boardButton21Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["21"] = boardButton21
         boardValues["21"] = 0.0
         addSubview(boardButton21)
         
         let boardButton22 = UIButton( frame: CGRect(x: 2*width, y: 8*height, width: width, height: height))
-        boardButton22.layer.borderColor = yellow.CGColor
-        boardButton22.layer.borderWidth = 1
-        boardButton22.addTarget(self, action: #selector( RouletteBoardControl.boardButton22Tapped(_:)), forControlEvents: .TouchDown)
         let number22 = UIImage(named:"number22")
-        boardButton22.setBackgroundImage(number22, forState: .Normal)
+        setupButton(on: boardButton22, with: number22!, border: 1, widthColor: yellow.CGColor)
+        boardButton22.addTarget(self, action: #selector( RouletteBoardControl.boardButton22Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["22"] = boardButton22
         boardValues["22"] = 0.0
         addSubview(boardButton22)
         
         let boardButton23 = UIButton( frame: CGRect( x: 3*width, y: 8*height, width: width, height: height))
-        boardButton23.layer.borderColor = yellow.CGColor
-        boardButton23.layer.borderWidth = 1
-        boardButton23.addTarget(self, action: #selector( RouletteBoardControl.boardButton23Tapped(_:)), forControlEvents: .TouchDown)
         let number23 = UIImage(named:"number23")
-        boardButton23.setBackgroundImage(number23, forState: .Normal)
+        setupButton(on: boardButton23, with: number23!, border: 1, widthColor: yellow.CGColor)
+        boardButton23.addTarget(self, action: #selector( RouletteBoardControl.boardButton23Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["23"] = boardButton23
         boardValues["23"] = 0.0
         addSubview(boardButton23)
         
         let boardButton24 = UIButton( frame: CGRect(x: 4*width, y: 8*height, width: width, height: height))
-        boardButton24.layer.borderColor = yellow.CGColor
-        boardButton24.layer.borderWidth = 1
-        boardButton24.addTarget(self, action: #selector(RouletteBoardControl.boardButton24Tapped(_:)), forControlEvents: .TouchDown)
         let number24 = UIImage(named:"number24")
-        boardButton24.setBackgroundImage(number24, forState: .Normal)
+        setupButton(on: boardButton24, with: number24!, border: 1, widthColor: yellow.CGColor)
+        boardButton24.addTarget(self, action: #selector(RouletteBoardControl.boardButton24Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["24"] = boardButton24
         boardValues["24"] = 0.0
         addSubview(boardButton24)
@@ -361,187 +298,151 @@ class RouletteBoardControl: UIView {
         //novi ciklus
         
         let boardButtonOdd = UIButton(frame: CGRect(x:0, y:9*height, width: width, height: 2*height))
-        boardButtonOdd.layer.borderColor = yellow.CGColor
-        boardButtonOdd.layer.borderWidth = 1
-        boardButtonOdd.addTarget(self, action: #selector(RouletteBoardControl.boardButtonOddTapped(_:)), forControlEvents: .TouchDown)
         let odd = UIImage(named:"odd")
-        boardButtonOdd.setBackgroundImage(odd, forState: .Normal)
+        setupButton(on: boardButtonOdd, with: odd!, border: 1, widthColor: yellow.CGColor)
+        boardButtonOdd.addTarget(self, action: #selector(RouletteBoardControl.boardButtonOddTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["Odd"] = boardButtonOdd
         boardValues["Odd"] = 0.0
         addSubview(boardButtonOdd)
         
         let boardButton2536 = UIButton(frame: CGRect( x: width, y: 9*height, width: width, height: 4*height))
-        boardButton2536.layer.borderColor = yellow.CGColor
-        boardButton2536.layer.borderWidth = 1
-        boardButton2536.addTarget(self, action: #selector( RouletteBoardControl.boardButton2536Tapped(_:)), forControlEvents: .TouchDown)
         let image2536 = UIImage(named:"image2536")
-        boardButton2536.setBackgroundImage(image2536, forState: .Normal)
+        setupButton(on: boardButton2536, with: image2536!, border: 1, widthColor: yellow.CGColor)
+        boardButton2536.addTarget(self, action: #selector( RouletteBoardControl.boardButton2536Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["2536"] = boardButton2536
         boardValues["2536"] = 0.0
         addSubview(boardButton2536)
         
         let boardButton25 = UIButton( frame: CGRect( x: 2*width, y: 9*height, width: width, height: height))
-        boardButton25.layer.borderColor = yellow.CGColor
-        boardButton25.layer.borderWidth = 1
-        boardButton25.addTarget(self, action: #selector( RouletteBoardControl.boardButton25Tapped(_:)), forControlEvents: .TouchDown)
         let number25 = UIImage(named:"number25")
-        boardButton25.setBackgroundImage(number25, forState: .Normal)
+        setupButton(on: boardButton25, with: number25!, border: 1, widthColor: yellow.CGColor)
+        boardButton25.addTarget(self, action: #selector( RouletteBoardControl.boardButton25Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["25"] = boardButton25
         boardValues["25"] = 0.0
         addSubview(boardButton25)
         
         let boardButton26 = UIButton( frame: CGRect(x: 3*width, y: 9*height, width: width, height: height))
-        boardButton26.layer.borderColor = yellow.CGColor
-        boardButton26.layer.borderWidth = 1
-        boardButton26.addTarget(self, action: #selector(RouletteBoardControl.boardButton26Tapped(_:)), forControlEvents: .TouchDown)
         let number26 = UIImage(named:"number26")
-        boardButton26.setBackgroundImage(number26, forState: .Normal)
+        setupButton(on: boardButton26, with: number26!, border: 1, widthColor: yellow.CGColor)
+        boardButton26.addTarget(self, action: #selector(RouletteBoardControl.boardButton26Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["26"] = boardButton26
         boardValues["26"] = 0.0
         addSubview(boardButton26)
         
         let boardButton27 = UIButton( frame: CGRect(x: 4*width, y: 9*height, width: width, height: height))
-        boardButton27.layer.borderColor = yellow.CGColor
-        boardButton27.layer.borderWidth = 1
-        boardButton27.addTarget(self, action: #selector( RouletteBoardControl.boardButton27Tapped(_:)), forControlEvents: .TouchDown)
         let number27 = UIImage(named:"number27")
-        boardButton27.setBackgroundImage(number27, forState: .Normal)
+        setupButton(on: boardButton27, with: number27!, border: 1, widthColor: yellow.CGColor)
+        boardButton27.addTarget(self, action: #selector( RouletteBoardControl.boardButton27Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["27"] = boardButton27
         boardValues["27"] = 0.0
         addSubview(boardButton27)
         
         
         let boardButton28 = UIButton( frame: CGRect(x: 2*width, y: 10*height, width: width, height: height))
-        boardButton28.layer.borderColor = yellow.CGColor
-        boardButton28.layer.borderWidth = 1
-        boardButton28.addTarget(self, action: #selector( RouletteBoardControl.boardButton28Tapped(_:)), forControlEvents: .TouchDown)
         let number28 = UIImage(named:"number28")
-        boardButton28.setBackgroundImage(number28, forState: .Normal)
+        setupButton(on: boardButton28, with: number28!, border: 1, widthColor: yellow.CGColor)
+        boardButton28.addTarget(self, action: #selector( RouletteBoardControl.boardButton28Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["28"] = boardButton28
         boardValues["28"] = 0.0
         addSubview(boardButton28)
         
         
         let boardButton29 = UIButton( frame: CGRect( x: 3*width, y: 10*height, width: width, height: height))
-        boardButton29.layer.borderColor = yellow.CGColor
-        boardButton29.layer.borderWidth = 1
-        boardButton29.addTarget(self, action: #selector( RouletteBoardControl.boardButton29Tapped(_:)), forControlEvents: .TouchDown)
         let number29 = UIImage(named:"number29")
-        boardButton29.setBackgroundImage(number29, forState: .Normal)
+        setupButton(on: boardButton29, with: number29!, border: 1, widthColor: yellow.CGColor)
+        boardButton29.addTarget(self, action: #selector( RouletteBoardControl.boardButton29Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["29"] = boardButton29
         boardValues["29"] = 0.0
         addSubview(boardButton29)
         
         let boardButton30 = UIButton( frame: CGRect(x: 4*width, y: 10*height, width: width, height: height))
-        boardButton30.layer.borderColor = yellow.CGColor
-        boardButton30.layer.borderWidth = 1
-        boardButton30.addTarget(self, action: #selector(RouletteBoardControl.boardButton30Tapped(_:)), forControlEvents: .TouchDown)
         let number30 = UIImage(named:"number30")
-        boardButton30.setBackgroundImage(number30, forState: .Normal)
+        setupButton(on: boardButton30, with: number30!, border: 1, widthColor: yellow.CGColor)
+        boardButton30.addTarget(self, action: #selector(RouletteBoardControl.boardButton30Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["30"] = boardButton30
         boardValues["30"] = 0.0
         addSubview(boardButton30)
         
         
         let boardButton1936 = UIButton(frame: CGRect(x:0, y:11*height, width: width, height: 2*height))
-        boardButton1936.layer.borderColor = yellow.CGColor
-        boardButton1936.layer.borderWidth = 1
-        boardButton1936.addTarget(self, action: #selector(RouletteBoardControl.boardButton1936Tapped(_:)), forControlEvents: .TouchDown)
         let image1936 = UIImage(named:"image1936")
-        boardButton1936.setBackgroundImage(image1936, forState: .Normal)
+        setupButton(on: boardButton1936, with: image1936!, border: 1, widthColor: yellow.CGColor)
+        boardButton1936.addTarget(self, action: #selector(RouletteBoardControl.boardButton1936Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["1936"] = boardButton1936
         boardValues["1936"] = 0.0
         addSubview(boardButton1936)
         
         let boardButton31 = UIButton( frame: CGRect( x: 2*width, y: 11*height, width: width, height: height))
-        boardButton31.layer.borderColor = yellow.CGColor
-        boardButton31.layer.borderWidth = 1
-        boardButton31.addTarget(self, action: #selector( RouletteBoardControl.boardButton31Tapped(_:)), forControlEvents: .TouchDown)
         let number31 = UIImage(named:"number31")
-        boardButton31.setBackgroundImage(number31, forState: .Normal)
+        setupButton(on: boardButton31, with: number31!, border: 1, widthColor: yellow.CGColor)
+        boardButton31.addTarget(self, action: #selector( RouletteBoardControl.boardButton31Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["31"] = boardButton31
         boardValues["31"] = 0.0
         addSubview(boardButton31)
         
         let boardButton32 = UIButton( frame: CGRect(x: 3*width, y: 11*height, width: width, height: height))
-        boardButton32.layer.borderColor = yellow.CGColor
-        boardButton32.layer.borderWidth = 1
-        boardButton32.addTarget(self, action: #selector(RouletteBoardControl.boardButton32Tapped(_:)), forControlEvents: .TouchDown)
         let number32 = UIImage(named:"number32")
-        boardButton32.setBackgroundImage(number32, forState: .Normal)
+        setupButton(on: boardButton32, with: number32!, border: 1, widthColor: yellow.CGColor)
+        boardButton32.addTarget(self, action: #selector(RouletteBoardControl.boardButton32Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["32"] = boardButton32
         boardValues["32"] = 0.0
         addSubview(boardButton32)
         
         let boardButton33 = UIButton( frame: CGRect(x: 4*width, y: 11*height, width: width, height: height))
-        boardButton33.layer.borderColor = yellow.CGColor
-        boardButton33.layer.borderWidth = 1
-        boardButton33.addTarget(self, action: #selector( RouletteBoardControl.boardButton33Tapped(_:)), forControlEvents: .TouchDown)
         let number33 = UIImage(named:"number33")
-        boardButton33.setBackgroundImage(number33, forState: .Normal)
+        setupButton(on: boardButton33, with: number33!, border: 1, widthColor: yellow.CGColor)
+        boardButton33.addTarget(self, action: #selector( RouletteBoardControl.boardButton33Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["33"] = boardButton33
         boardValues["33"] = 0.0
         addSubview(boardButton33)
         
         
         let boardButton34 = UIButton( frame: CGRect(x: 2*width, y: 12*height, width: width, height: height))
-        boardButton34.layer.borderColor = yellow.CGColor
-        boardButton34.layer.borderWidth = 1
-        boardButton34.addTarget(self, action: #selector( RouletteBoardControl.boardButton34Tapped(_:)), forControlEvents: .TouchDown)
         let number34 = UIImage(named:"number34")
-        boardButton34.setBackgroundImage(number34, forState: .Normal)
+        setupButton(on: boardButton34, with: number34!, border: 1, widthColor: yellow.CGColor)
+        boardButton34.addTarget(self, action: #selector( RouletteBoardControl.boardButton34Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["34"] = boardButton34
         boardValues["34"] = 0.0
         addSubview(boardButton34)
         
         
         let boardButton35 = UIButton( frame: CGRect( x: 3*width, y: 12*height, width: width, height: height))
-        boardButton35.layer.borderColor = yellow.CGColor
-        boardButton35.layer.borderWidth = 1
-        boardButton35.addTarget(self, action: #selector( RouletteBoardControl.boardButton35Tapped(_:)), forControlEvents: .TouchDown)
         let number35 = UIImage(named:"number35")
-        boardButton35.setBackgroundImage(number35, forState: .Normal)
+        setupButton(on: boardButton35, with: number35!, border: 1, widthColor: yellow.CGColor)
+        boardButton35.addTarget(self, action: #selector( RouletteBoardControl.boardButton35Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["35"] = boardButton35
         boardValues["35"] = 0.0
         addSubview(boardButton35)
         
         let boardButton36 = UIButton( frame: CGRect(x: 4*width, y: 12*height, width: width, height: height))
-        boardButton36.layer.borderColor = yellow.CGColor
-        boardButton36.layer.borderWidth = 1
-        boardButton36.addTarget(self, action: #selector(RouletteBoardControl.boardButton36Tapped(_:)), forControlEvents: .TouchDown)
         let number36 = UIImage(named:"number36")
-        boardButton36.setBackgroundImage(number36, forState: .Normal)
+        setupButton(on: boardButton36, with: number36!, border: 1, widthColor: yellow.CGColor)
+        boardButton36.addTarget(self, action: #selector(RouletteBoardControl.boardButton36Tapped(_:)), forControlEvents: .TouchDown)
         boardButtons["36"] = boardButton36
         boardValues["36"] = 0.0
         addSubview(boardButton36)
         
         let boardButton1st = UIButton( frame: CGRect(x: 2*width, y: 13*height, width: width, height: height))
-        boardButton1st.layer.borderColor = yellow.CGColor
-        boardButton1st.layer.borderWidth = 1
-        boardButton1st.addTarget(self, action: #selector( RouletteBoardControl.boardButton1stTapped(_:)), forControlEvents: .TouchDown)
         let image1st = UIImage(named:"image1st")
-        boardButton1st.setBackgroundImage(image1st, forState: .Normal)
+        setupButton(on: boardButton1st, with: image1st!, border: 1, widthColor: yellow.CGColor)
+        boardButton1st.addTarget(self, action: #selector( RouletteBoardControl.boardButton1stTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["1st"] = boardButton1st
         boardValues["1st"] = 0.0
         addSubview(boardButton1st)
         
         
         let boardButton2nd = UIButton( frame: CGRect( x: 3*width, y: 13*height, width: width, height: height))
-        boardButton2nd.layer.borderColor = yellow.CGColor
-        boardButton2nd.layer.borderWidth = 1
-        boardButton2nd.addTarget(self, action: #selector( RouletteBoardControl.boardButton2ndTapped(_:)), forControlEvents: .TouchDown)
         let image2nd = UIImage(named:"image2nd")
-        boardButton2nd.setBackgroundImage(image2nd, forState: .Normal)
+        setupButton(on: boardButton2nd, with: image2nd!, border: 1, widthColor: yellow.CGColor)
+        boardButton2nd.addTarget(self, action: #selector( RouletteBoardControl.boardButton2ndTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["2nd"] = boardButton2nd
         boardValues["2nd"] = 0.0
         addSubview(boardButton2nd)
         
         let boardButton3rd = UIButton( frame: CGRect(x: 4*width, y: 13*height, width: width, height: height))
-        boardButton3rd.layer.borderColor = yellow.CGColor
-        boardButton3rd.layer.borderWidth = 1
-        boardButton3rd.addTarget(self, action: #selector(RouletteBoardControl.boardButton3rdTapped(_:)), forControlEvents: .TouchDown)
         let image3rd = UIImage(named:"image3rd")
-        boardButton3rd.setBackgroundImage(image3rd, forState: .Normal)
+        setupButton(on: boardButton3rd, with: image3rd!, border: 1, widthColor: yellow.CGColor)
+        boardButton3rd.addTarget(self, action: #selector(RouletteBoardControl.boardButton3rdTapped(_:)), forControlEvents: .TouchDown)
         boardButtons["3rd"] = boardButton3rd
         boardValues["3rd"] = 0.0
         addSubview(boardButton3rd)
@@ -1538,5 +1439,13 @@ extension RouletteBoardControl {
         
         boardValues["34"]! += bet/10
         boardButtons["34"]!.setTitle(String(format: "%.1f", boardValues["34"]!), forState: .Normal)
+    }
+}
+
+extension RouletteBoardControl {
+    func setupButton(on button:UIButton, with image: UIImage, border width: CGFloat, widthColor color: CGColor ) {
+        button.layer.borderWidth = width
+        button.layer.borderColor = color
+        button.setBackgroundImage(image, forState: .Normal)
     }
 }
