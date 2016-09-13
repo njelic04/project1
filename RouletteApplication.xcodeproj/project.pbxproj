@@ -14,6 +14,7 @@
 		7F9B02511D72219E003A3704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B024F1D72219E003A3704 /* Main.storyboard */; };
 		7F9B02561D72219E003A3704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B02541D72219E003A3704 /* LaunchScreen.storyboard */; };
 		7FE732A01D8648DB001A42E1 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7329F1D8648DB001A42E1 /* image.xcassets */; };
+		89A76F8A1D887005005FE11F /* BoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A76F891D887005005FE11F /* BoardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7F9B02551D72219E003A3704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F9B02571D72219E003A3704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FE7329F1D8648DB001A42E1 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = image.xcassets; path = ../image.xcassets; sourceTree = "<group>"; };
+		89A76F891D887005005FE11F /* BoardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				7F022C281D7395200087CEAA /* RouletteBoardControl.swift */,
 				7F9B02571D72219E003A3704 /* Info.plist */,
 				7F5247C91D78E86A0082D780 /* RouletteCalculator.swift */,
+				89A76F891D887005005FE11F /* BoardButton.swift */,
 			);
 			path = RouletteApplication;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9B024E1D72219E003A3704 /* ViewController.swift in Sources */,
+				89A76F8A1D887005005FE11F /* BoardButton.swift in Sources */,
 				7F5247CA1D78E86A0082D780 /* RouletteCalculator.swift in Sources */,
 				7F9B024C1D72219E003A3704 /* AppDelegate.swift in Sources */,
 				7F022C291D7395200087CEAA /* RouletteBoardControl.swift in Sources */,
